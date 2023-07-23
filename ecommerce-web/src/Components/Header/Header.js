@@ -2,12 +2,12 @@ import React from 'react'
 import "./Header.css";
 const Header = () => {
   return (
-    <div className='container'>
+    <div className='container-header'>
         <div className='Logo'>
             <div className='dropdown'>
                 <i class="fa-solid fa-bars" style={{color: " #000000"}}></i>
             </div>
-            <h1>Guobin Studio</h1>
+            <h1>Oiduts Studio</h1>
             <div>
                 <i class="fa-solid fa-magnifying-glass" style={{color: " #000000"}}></i>
                 <i class="fa-regular fa-user" style={{color: " #000000"}}></i>
