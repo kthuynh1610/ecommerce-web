@@ -1,0 +1,27 @@
+.container-footer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      background-color: #191919;
+      color: white;
+}
+.itemList{
+      margin: 20px 20px;
+}
+.itemList ul{
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+}
+.itemList ul li{
+      margin: 0 15px;
+}
+.copyright{
+      margin: 25px auto;
+      justify-items: center;
+}
+.copyright h3{
+      margin: 0 auto;
+}

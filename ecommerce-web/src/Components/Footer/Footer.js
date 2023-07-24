@@ -1,11 +1,8 @@
 import React from 'react'
-
+import './Footer.css';
 const Footer = () => {
   return (
     <div className='container-footer'>
-      <div>
-
-      </div>
       <div className='itemList'>
         <ul>
           <li>New Arrival</li>
@@ -14,7 +11,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className='copyright'>
-        <h2>Copyright © 2023 Oiduts Studio</h2>
+        <h3>Copyright © 2023 Oiduts Studio</h3>
       </div>
     </div>
   )
