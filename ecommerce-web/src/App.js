@@ -6,6 +6,7 @@ import New from './Components/NewArrival/New';
 import All from './Components/AllProducts/All';
 import NewC from './Components/NewCollection/NewC';
 import Footer from './Components/Footer/Footer';
+import Product from './Components/Products/Product';
 function App() {
   return (
     <BrowserRouter>
@@ -14,7 +15,8 @@ function App() {
         <Route path='/' element={<HomePage/>}/>
         <Route path="/newArrival" element={<New/>}/>
         <Route path="/All" element={<All/>}/>
-        <Route path="NewCollection" element={<NewC/>}/>
+        <Route path="/NewCollection" element={<NewC/>}/>
+        <Route path="/product/:id" element={<Product/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

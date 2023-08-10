@@ -1,0 +1,84 @@
+.containerProduct{
+      height: 100%;
+      width: 1280px;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      flex-direction: column;
+}
+.route{
+      display: flex;
+      width: 100%;
+      margin: 20px 0;
+      height: 40px;
+      background-color: #fafafa;
+
+}
+.productDisplay{
+      display: flex;
+      flex-direction: row;
+}
+.left{
+      display: flex;
+      flex-direction: row;
+}
+.smallImg img{
+      width: 150px;
+      height: 150px;
+}
+.smallImg{
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+}
+.bigImg img{
+      width: 500px;
+      height: 500px;
+}
+.right{
+      width: 500px;
+      height: 100%;
+}
+.right p{
+      border-bottom: 1px dotted #e5dcdc;
+      margin: 15px 0;
+      font-weight: bold;
+}
+.addItem{
+      width: 120px;
+      height: 30px;
+      margin: 30px 0;
+      background-color: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.addItem button{
+      margin: 0 10px;
+      width: 100px;
+      border: none;
+      cursor: pointer;
+      object-fit: fill;
+}
+.addItem h1{
+      font-size: 15px;
+      font-weight: normal;
+}
+.button{
+      display: flex;
+}
+.button button{
+      border: none;
+      width: 150px;
+      height: 60px;
+      margin: 0 20px;
+      cursor: pointer;
+      color: white;
+      background-color: black;
+      transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.button button:hover{
+      background: white;
+      color: black;
+      background-position: left 0 right 100%;
+}

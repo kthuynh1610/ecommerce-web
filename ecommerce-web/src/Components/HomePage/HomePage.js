@@ -1,7 +1,11 @@
 import React from 'react'
 import SlideShow from './SlideShow/SlideShow'
 import './HomePage.css';
-const HomePage = () => {
+import {Items} from '../Data/AllDatas'
+import { Link } from 'react-router-dom';
+
+const HomePage = (Item) => {
+
   return (
     <div className='container-Home'>
         <SlideShow/>
@@ -10,7 +14,20 @@ const HomePage = () => {
             <div className='dot'></div>
             <p>View more</p>
             <div class="ItemList">
-              
+              {Items.map((Item)=>{
+                  return <div key={Item.id}>
+                    <div className='card'>
+                      <Link to={`/product/${Item.id}`}>
+                      <img alt="Item.des" 
+                      onMouseOver={e => (e.currentTarget.src = Item.back)}
+                      onMouseOut={e => (e.currentTarget.src = Item.front)}
+                      src={Item.front} />
+                      <p>{Item.des}</p>
+                      <h5>{Item.price}</h5>
+                      </Link>
+                    </div>
+                  </div>
+                })}
             </div>
         </div>
     </div>
