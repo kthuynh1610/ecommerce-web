@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Header.css";
+import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <div className='container-header'>
@@ -7,7 +8,7 @@ const Header = () => {
             <div className='dropdown'>
                 <i class="fa-solid fa-bars" style={{color: " #000000"}}></i>
             </div>
-            <h1>Oiduts Studio</h1>
+            <h1><a href='/' style={{textDecoration:'none', color:"black"}}>Oiduts Studio</a></h1>
             <div>
                 <i class="fa-solid fa-magnifying-glass" style={{color: " #000000"}}></i>
                 <i class="fa-regular fa-user" style={{color: " #000000"}}></i>
@@ -15,10 +16,10 @@ const Header = () => {
             </div>
         </div>
         <ul>
-            <li>New Arrival</li>
-            <li>All Products</li>
-            <li>Sales</li>
-            <li>Spring Summer 2023</li>
+            <li><Link href="#">New Arrival</Link></li>
+            <li><Link href="#">All Products</Link></li>
+            <li><Link href="#">Sales</Link></li>
+            <li><Link href="#">Spring Summer 2023</Link></li>
         </ul>
     </div>
   )
