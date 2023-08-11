@@ -1,0 +1,21 @@
+.container{
+    width: auto;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.slide{
+    display: inline-block;
+}
+/* .slider img{
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center center;
+} */
+.slider{
+    white-space: nowrap;
+    transition: ease 600ms;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center center;
+}
