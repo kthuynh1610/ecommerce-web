@@ -1,7 +1,12 @@
 import React from 'react'
 import "./Header.css";
 import { Link } from 'react-router-dom';
+import {useCartProvider} from '../CartProvider/CartContext';
+import Cart from '../Cart/Cart';
 const Header = () => {
+
+  const {showCart, setShowCart, totalQty} = useCartProvider();
+
   return (
     <div className='container-header'>
         <div className='Logo'>
@@ -12,7 +17,10 @@ const Header = () => {
             <div>
                 <i class="fa-solid fa-magnifying-glass" style={{color: " #000000"}}></i>
                 <i class="fa-regular fa-user" style={{color: " #000000"}}></i>
-                <i class="fa-solid fa-cart-shopping" style={{color: " #000000"}}/>
+                <button type='button' onClick={() => setShowCart(true)}>
+                    <i class="fa-solid fa-cart-shopping" style={{color: " #000000"}}/>
+                </button>
+                {showCart && <Cart/>}
             </div>
         </div>
         <ul>

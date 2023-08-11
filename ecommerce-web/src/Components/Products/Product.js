@@ -1,20 +1,18 @@
-import React, { useState } from 'react'
-import {Items} from '../Data/AllDatas'; 
+import React, { useContext, useState } from 'react'
+import {Items} from '../../Data/AllDatas'; 
 import { useParams } from 'react-router';
 import './Product.css';
+import {useCartProvider} from '../CartProvider/CartContext';
 const Product = () => {
   const {id} = useParams();
   const Item = Items.filter((Item) => Item.id === parseInt(id));
   const [image, setImage] = useState(Item[0].front)
-  const [count, setCount] = useState(1);
-  const [cart, setCart] = useState(0)
+  const {qty, decreaseQty, increaseQty, addToCart, cartItem} = useCartProvider()
   const changeImage= (e) =>{
     setImage(e.target.src)
   }
-  const addItem = (count) =>{
-    setCart(count)
-  }
-  return (
+  
+  return (  
     <div className='containerProduct'>
       <div className='route'>
         <p>Home/ </p>
@@ -38,12 +36,17 @@ const Product = () => {
             <p>{Item[0].des}</p>
             <h4>{Item[0].price}</h4>
             <div className='addItem'>
-              <button onClick={e => count === 1 ? 1 : setCount(count-1)}>-</button>
-              <h1>{count}</h1>
-              <button onClick={e => setCount(count+1)}>+</button>
+              <h1>Quantity: </h1>
+              <button onClick={decreaseQty}>-</button>
+              <h1>{qty}</h1>
+              <button onClick={increaseQty}>+</button>
             </div>
             <div className='button'>
-              <button onClick={addItem}>Add to card</button>
+              <button 
+              onClick={() => addToCart(Item[0], qty)}
+              >
+                Add to cart
+              </button>
               <button>Buy now</button>
             </div>
           </div>

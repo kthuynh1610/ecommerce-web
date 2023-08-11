@@ -45,7 +45,7 @@
       font-weight: bold;
 }
 .addItem{
-      width: 120px;
+      width: 200px;
       height: 30px;
       margin: 30px 0;
       background-color: #fafafa;
@@ -59,6 +59,8 @@
       border: none;
       cursor: pointer;
       object-fit: fill;
+      color: white;
+      background-color: black;
 }
 .addItem h1{
       font-size: 15px;
