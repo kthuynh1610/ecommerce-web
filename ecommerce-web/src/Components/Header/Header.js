@@ -17,9 +17,7 @@ const Header = () => {
             <div>
                 <i class="fa-solid fa-magnifying-glass" style={{color: " #000000"}}></i>
                 <i class="fa-regular fa-user" style={{color: " #000000"}}></i>
-                <button type='button' onClick={() => setShowCart(true)}>
-                    <i class="fa-solid fa-cart-shopping" style={{color: " #000000"}}/>
-                </button>
+                <i class="fa-solid fa-cart-shopping" onClick={() => setShowCart(true)} style={{color: " #000000", cursor:"pointer"}}/>
                 {showCart && <Cart/>}
             </div>
         </div>
