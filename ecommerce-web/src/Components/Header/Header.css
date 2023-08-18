@@ -63,3 +63,19 @@
 .dropdown{
     opacity: 0;
 }
+.cartDisplay{
+    width: 25px;
+    height: 20px;
+    border-radius: 30px;
+    background-color: rgb(191, 59, 59);
+    font-size: 17px;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    margin-left: 15px;
+    cursor: pointer;
+    margin-top: -10px;
+}

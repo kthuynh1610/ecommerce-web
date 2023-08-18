@@ -6,11 +6,10 @@ import New from './Pages/NewArrival/New';
 import All from './Components/AllProducts/All';
 import NewC from './Pages/NewCollection/NewC';
 import Footer from './Components/Footer/Footer';
-import { useEffect } from 'react';
 import Product from './Components/Products/Product';
 import { CartProvider } from './Components/CartProvider/CartContext';
-function App() {
 
+const App = ()=> {
   return (
     <CartProvider>
       <Header/>

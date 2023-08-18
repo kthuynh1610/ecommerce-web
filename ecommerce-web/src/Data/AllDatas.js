@@ -8,6 +8,14 @@ import quan1 from '../Assets/quan1.webp';
 import quan2 from '../Assets/quan2.webp';
 import mu1 from '../Assets/mu1.webp';
 import mu2 from '../Assets/mu2.webp';
+import gallery_item_1 from '../Assets/gallery_item_1.webp';
+import gallery_item_2 from '../Assets/gallery_item_2.webp';
+import gallery_item_3 from '../Assets/gallery_item_3.webp';
+import gallery_item_4 from '../Assets/gallery_item_4.webp';
+import gallery_item_5 from '../Assets/gallery_item_5.webp';
+import gallery_item_6 from '../Assets/gallery_item_6.webp';
+import gallery_item_7 from '../Assets/gallery_item_7.webp';
+import gallery_item_8 from '../Assets/gallery_item_8.webp';
 const Items = [
       {
         id: 1,
@@ -50,6 +58,41 @@ const Items = [
         back: quan2
       }
     ]
+
+const gallery = [
+  {
+    id: 1,
+    src : gallery_item_1 
+},
+{
+  id: 2,
+  src : gallery_item_2 
+},
+{
+  id: 3,
+  src : gallery_item_3 
+},
+{
+  id: 4,
+  src : gallery_item_4 
+},
+{
+  id: 5,
+  src : gallery_item_5 
+},
+{
+  id: 6,
+  src : gallery_item_6 
+},
+{
+  id: 7,
+  src : gallery_item_7 
+},
+{
+  id: 8,
+  src : gallery_item_8 
+},
+]
 function getItemData(id){
   let itemData = Items.find(Item=> Item.id ===id);
   if(itemData == undefined){
@@ -58,4 +101,4 @@ function getItemData(id){
   }
   return itemData
 }
-export {Items, getItemData};
+export {Items, getItemData, gallery};

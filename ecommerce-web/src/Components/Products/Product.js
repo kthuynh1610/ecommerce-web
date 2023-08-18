@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, {useState, useEffect } from 'react'
 import {Items} from '../../Data/AllDatas'; 
 import { useParams } from 'react-router';
 import './Product.css';
@@ -7,11 +7,12 @@ const Product = () => {
   const {id} = useParams();
   const Item = Items.filter((Item) => Item.id === parseInt(id));
   const [image, setImage] = useState(Item[0].front)
-  const {qty, decreaseQty, increaseQty, addToCart, cartItem} = useCartProvider()
+  const {qty, decreaseQty, increaseQty, addToCart} = useCartProvider()
   const changeImage= (e) =>{
     setImage(e.target.src)
   }
   
+
   return (  
     <div className='containerProduct'>
       <div className='route'>

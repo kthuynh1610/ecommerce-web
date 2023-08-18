@@ -1,0 +1,65 @@
+.containerGallery{
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      width: 100%;
+      height: 600px;
+      margin: 50px 0;
+}
+.sliderShow{
+      display: flex;
+      flex-direction: row;
+      margin-top: 30px;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      scroll-behavior: smooth;
+      position: relative;
+}
+/* hide scroll bar */
+.sliderShow::-webkit-scrollbar{
+      display: none;
+      -ms-overflow-style: none;
+       scrollbar-width: none;
+}
+.item{
+      display: inline-block;
+}
+.item img{
+      width: 400px;
+      height: 400px;
+}
+.slash {
+      width: 100px;
+      height: 1.5px;
+      background-color: black;
+      margin: 5px auto;
+}
+.containerGallery h1{
+      display: flex;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 2px;
+      justify-content: center;
+}
+.btns button {
+      color: white;
+      background-color: #373737;
+      padding: 1rem;
+      font-size: 1.5rem;
+      border: none;
+      height: 3rem;
+      width: 3rem;
+      cursor: pointer;
+      transition: all 0.1s ease-in;
+  }
+  
+  .btns {
+      display: flex;
+      gap: .4rem;
+      justify-content: flex-end;
+  }
+  
+  .btns button:hover {
+      background-color: black;
+  }

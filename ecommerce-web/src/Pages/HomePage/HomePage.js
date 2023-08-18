@@ -3,6 +3,7 @@ import SlideShow from './SlideShow/SlideShow'
 import './HomePage.css';
 import {Items} from '../../Data/AllDatas'
 import { Link } from 'react-router-dom';
+import Gallerry from '../../Components/Galerry/Gallerry';
 const HomePage = (Item) => {
 
   return (
@@ -29,6 +30,7 @@ const HomePage = (Item) => {
                 })}
             </div>
         </div>
+        <Gallerry/>
     </div>
   )
 }
