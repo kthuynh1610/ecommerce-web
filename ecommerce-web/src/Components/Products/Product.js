@@ -2,6 +2,7 @@ import React, {useState, useEffect } from 'react'
 import {Items} from '../../Data/AllDatas'; 
 import { useParams } from 'react-router';
 import './Product.css';
+import Gallerry  from '../Galerry/Gallerry.js';
 import {useCartProvider} from '../CartProvider/CartContext';
 const Product = () => {
   const {id} = useParams();
@@ -16,8 +17,8 @@ const Product = () => {
   return (  
     <div className='containerProduct'>
       <div className='route'>
-        <p>Home/ </p>
-        <p>Ready To Wear/ </p>
+        <p>Home / </p>
+        <p style={{textTransform: 'capitalize'}}> {Item[0].catergory} / </p>
         <p> {Item[0].des}</p>
       </div>
       <div>
@@ -35,7 +36,7 @@ const Product = () => {
           </div>
           <div className='right'>
             <p>{Item[0].des}</p>
-            <h4>{Item[0].price}</h4>
+            <h4>{Item[0].price}$</h4>
             <div className='addItem'>
               <h1>Quantity: </h1>
               <button onClick={decreaseQty}>-</button>
@@ -56,6 +57,7 @@ const Product = () => {
       <div className='des'>
             <p>Detail: {Item[0].detail}</p>
       </div>
+      <Gallerry/>
     </div>
   )
 }

@@ -7,30 +7,35 @@ const Cart = () => {
 
   const cartRef= useRef();
   
-  const {totalPrice, totalQty, cartItem, setShowCart} = useCartProvider();
-  console.log(cartItem)
-
+  const {totalPrice, totalQty,onRemove, cartItem, setShowCart} = useCartProvider();
   function displayCart(){
     return(
       <>
         {cartItem.map((cartProduct)=>{
-          return<div key={cartProduct.id}>
-            <div>
-              <p>{cartProduct.des}</p>
-              <p>{cartProduct.quantity}</p>
-            </div>
+          return<div className='cartItem' key={cartProduct.id}>
+              <img src={cartProduct.front} alt={cartProduct.des}/>
+              <div className='cartItem-right'>
+                <div className='des'>{cartProduct.des}</div>
+                <div className='quantity'>{cartProduct.quantity}</div> 
+              </div>
+              <button onClick={()=>onRemove(cartProduct.id)}><i class="fa-solid fa-trash"></i></button>
           </div>
         })}
       </>
     )
   }
+  console.log(totalPrice)
   return (
     <div className='containerCart' ref={cartRef}>
-      <button type='button' onClick={()=> setShowCart(false)}>
-        <span>Your Cart</span>
-        <span>({totalQty} items)</span>
-      </button>
+        <button style={{width:'15px', cursor:'pointer'}} type='button' onClick={()=> setShowCart(false)}>X</button>
+        <div className='cart-top'>
+          <span>Your Cart</span>
+          <div className='price'>Total : {totalPrice}</div>
+        </div>
         {cartItem.length>0 ? displayCart() : <p>Cart Emtpy</p>}
+        <div className='checkout'>
+          <button>Check Out</button>
+        </div>
     </div>
   )
 }

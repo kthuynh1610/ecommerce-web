@@ -19,8 +19,9 @@ import gallery_item_8 from '../Assets/gallery_item_8.webp';
 const Items = [
       {
         id: 1,
-        des:"MAVERIK MESH FOOTBALL JERSEY ( BLACK)",
-        price: "49$",
+        des:"Maverik Mesh Football Jersey",
+        price: "49",
+        catergory: 't-shirt',
         detail: "Form Oversize",
         front: ao1,
         back: ao2 
@@ -28,7 +29,8 @@ const Items = [
       {
         id: 2,
         des:"Kaki Jacket",
-        price: "90$",
+        price: "90",
+        catergory: 'jacket',
         detail: "Form Oversize",
         front: ao3,
         back: ao4
@@ -37,6 +39,7 @@ const Items = [
         id: 3,
         des:"Faded Girl T-shirt",
         price: "49$",
+        catergory: 't-shirt',
         detail: "Form Oversize",
         front: ao5,
         back: ao6
@@ -44,7 +47,8 @@ const Items = [
       {
         id: 4,
         des:"Distressed Vintage Hat",
-        price: "40$",
+        price: "40",
+        catergory: 'hat',
         detail: "100% cotton, one size",
         front: mu1,
         back: mu2
@@ -52,7 +56,8 @@ const Items = [
       {
         id: 5,
         des:"Kaki Work Pants",
-        price: "80$",
+        price: "80",
+        catergory: 'pant',
         detail: "100% kaki",
         front: quan1,
         back: quan2
