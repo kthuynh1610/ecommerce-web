@@ -5,7 +5,7 @@ import {Items} from '../../Data/AllDatas'
 import { Link } from 'react-router-dom';
 import Gallerry from '../../Components/Galerry/Gallerry';
 const HomePage = (Item) => {
-
+  const readyToWear = Items.filter((item)=> item.id<=8)
   return (
     <div className='container-Home'>
         <SlideShow/>
@@ -14,7 +14,7 @@ const HomePage = (Item) => {
             <div className='dot'></div>
             <p>View more</p>
             <div class="ItemList">
-              {Items.map((Item)=>{
+              {readyToWear.map((Item)=>{
                   return <div key={Item.id}>
                     <div className='card'>
                       <Link to={`/product/${Item.id}`}>
@@ -23,7 +23,7 @@ const HomePage = (Item) => {
                       onMouseOut={e => (e.currentTarget.src = Item.front)}
                       src={Item.front} />
                       <p>{Item.des}</p>
-                      <h5>{Item.price}</h5>
+                      <h5>${Item.price}</h5>
                       </Link>
                     </div>
                   </div>

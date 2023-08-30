@@ -1,13 +1,14 @@
 import React from 'react'
 import './Footer.css';
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <div className='container-footer'>
-      <div className='itemList'>
+      <div className='itemListFooter'>
         <ul>
-          <li>New Arrival</li>
-          <li>All product</li>
-          <li>Sale</li>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to="Categories">Categories</Link></li>
+          <li><Link to='/All'>Spring Summer 2023</Link></li>
         </ul>
       </div>
       <div className='copyright'>

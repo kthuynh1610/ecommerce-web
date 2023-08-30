@@ -14,7 +14,7 @@ const Header = () => {
                 <i class="fa-solid fa-bars" style={{color: " #000000"}}></i>
             </div>
             <h1><Link to='/' style={{textDecoration:'none', color:"black"}}>Oiduts Studio</Link></h1>
-            <div>
+            <div className='cart'>
                 <div className="cartDisplay" onClick={() => setShowCart(true)}>{totalQty}</div>
                 <i class="fa-solid fa-cart-shopping" onClick={() => setShowCart(true)} style={{color: " #000000", cursor:"pointer"}}/>
                 {showCart && <Cart/>}
@@ -22,10 +22,8 @@ const Header = () => {
             
         </div>
         <ul>
-            <li><Link href="#">New Arrival</Link></li>
-            <li><Link to="/All">All Products</Link></li>
-            <li><Link href="#">Sales</Link></li>
-            <li><Link href="#">Spring Summer 2023</Link></li>
+            <li><Link to="/Categories">Categories</Link></li>
+            <li><Link to="/All">Spring Summer 2023</Link></li>
         </ul>
     </div>
   )

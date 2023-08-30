@@ -63,3 +63,12 @@
   .btns button:hover {
       background-color: black;
   }
+  @media only screen and (max-width: 992px) {
+      .containerGallery{
+          margin: 0 auto;
+          margin-top: 30px;
+      }
+      .btns{
+            margin-right: 50px;
+      }
+  }

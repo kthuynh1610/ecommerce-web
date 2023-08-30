@@ -7,19 +7,15 @@ import './SlideShow.css';
 const delay = 2500;
 const photos =[
   {
-    id: 1,
-    src: photo1
-  },
-  {
-    id: 2, 
+    id: 1, 
     src: photo2
   },
   {
-    id: 3, 
+    id: 2, 
     src: photo3
   },
   {
-    id: 4, 
+    id: 3, 
     src: photo4
   }
 ]
